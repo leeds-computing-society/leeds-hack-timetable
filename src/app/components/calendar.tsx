@@ -40,7 +40,7 @@ type CalendarResponse = z.infer<typeof CalendarResponseSchema>;
 
 const fetcher = async (): Promise<CalendarResponse> =>
 {
-    let response = await fetch(`http://api.timetable.leedshack.com/event`, {
+    let response = await fetch(`https://api.timetable.leedshack.com/event`, {
         method: "GET"
     });
 
