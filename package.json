@@ -1,0 +1,44 @@
+{
+    "name": "leeds-computing-society-website",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev --turbopack",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@gsap/react": "^2.1.2",
+        "@radix-ui/react-accordion": "^1.2.12",
+        "@react-three/drei": "^10.7.7",
+        "@react-three/fiber": "^9.4.2",
+        "embla-carousel-autoplay": "^8.6.0",
+        "embla-carousel-react": "^8.6.0",
+        "glsl-noise": "^0.0.0",
+        "glslify": "^7.1.1",
+        "glslify-loader": "^2.0.0",
+        "gsap": "^3.14.2",
+        "next": "16.0.10",
+        "postcss": "^8.5.6",
+        "react": "^19.2.3",
+        "react-dom": "^19.2.3",
+        "react-fast-marquee": "^1.6.5",
+        "react-scan": "^0.4.3",
+        "react-type-animation": "^3.2.0",
+        "schema-dts": "^1.1.5",
+        "swr": "^2.3.8",
+        "three": "^0.182.0",
+        "zod": "^4.3.5"
+    },
+    "devDependencies": {
+        "@tailwindcss/postcss": "^4.1.18",
+        "@types/node": "^24.10.4",
+        "@types/react": "^19.2.7",
+        "@types/react-dom": "^19.2.3",
+        "@types/three": "^0.182.0",
+        "raw-loader": "^4.0.2",
+        "tailwindcss": "^4.1.18",
+        "typescript": "^5.9.3"
+    }
+}
