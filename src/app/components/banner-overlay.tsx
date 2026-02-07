@@ -41,6 +41,32 @@ export const BannerOverlay = (properties: Banner) =>
         let inLength: number = 2.6;
         let length: number = 10;
 
+        // gsap.to(backgroundReference.current, {
+        //     top: 0,
+        //     duration: 0,
+        //     ease: "sine.inOut"
+        // });
+
+        // gsap.to(containerReference.current, {
+        //     top: 0,
+        //     delay: 0.4,
+        //     duration: 0,
+        //     ease: "sine.inOut"
+        // });
+
+        // gsap.to(logoCoverElements, {
+        //     height: "0%",
+        //     delay: 1,
+        //     duration: 0,
+        //     stagger: -0.2,
+        //     ease: "sine.inOut"
+        // });
+
+        //
+        //
+        //
+        //
+
         gsap.to(backgroundReference.current, {
             top: 0,
             duration: 1,
@@ -163,43 +189,6 @@ export const BannerOverlay = (properties: Banner) =>
             duration: 14.2,
             ease: "circ.in"
         });
-        // gsap.to(containerReference.current, {
-        //     opacity: 0,
-        //     duration: 1,
-        //     delay: 9,
-        //     ease: "sine.inOut"
-        // });
-
-        // if (isVisible === true)
-        // {
-        //     gsap.to(containerReference.current, {
-        //         opacity: 1,
-        //         duration: 1.0,
-        //         ease: "sine.inOut",
-        //         onComplete: () =>
-        //         {
-        //             if (videoReference.current === null) return;
-        //             videoReference.current.play();
-        //         }
-        //     });
-        // }
-
-        // if (isVisible === false)
-        // {
-        //     gsap.to(containerReference.current, {
-        //         opacity: 0,
-        //         duration: 1.0,
-        //         ease: "sine.inOut",
-        //         onComplete: () =>
-        //         {
-        //             if (videoReference.current === null) return;
-        //             videoReference.current.pause();
-        //             videoReference.current.currentTime = 0;
-        //         }
-        //     });
-        // }
-
-
     }, { dependencies: [properties] });
 
     return (
@@ -207,23 +196,23 @@ export const BannerOverlay = (properties: Banner) =>
             <div ref={backgroundReference} className="absolute -top-full left-0 z-50 w-full h-full" style={{ backgroundColor: properties.colour }}></div>
             <div ref={containerReference} className="absolute -top-full left-0 z-50 w-full h-full grid grid-rows-3 bg-white">
                 <div ref={textReference} className="flex flex-col p-12 gap-3 row-span-1">
-                    <div className="text-5xl">{properties.title}</div>
-                    <div className="text-xl">{properties.subtitle}<span className="underline underline-offset-2" style={{ color: properties.colour }}>{properties.subtitleLink}</span></div>
+                    <div className="text-6xl">{properties.title}</div>
+                    <div className="text-2xl">{properties.subtitle}<span className="underline underline-offset-2" style={{ color: properties.colour }}>{properties.subtitleLink}</span></div>
                 </div>
                 <div className="border-t border-dashed border-black grid grid-rows-2 overflow-hidden row-span-2">
                     <div className="relative bg-warning-diagonal">
                         <img ref={imageReference} className="absolute left-3/4 w-full h-full border-l border-black object-cover" src={properties.image}></img>
                         <div ref={imageCoverReference} className="absolute top-0 left-0 h-full w-full bg-black"></div>
                     </div>
-                    <div className="border-t border-dashed border-black flex flex-row">
-                        <div className="relative border-r border-black border-dashed p-24 flex items-center">
+                    <div className="border-t border-dashed border-black grid grid-cols-3">
+                        <div className="relative border-r border-black border-dashed flex items-center justify-center col-span-1">
                             {properties.logo}
                             <div ref={logoCoverReference}>
                                 <div className="absolute top-0 left-0 h-full w-full" style={{ backgroundColor: properties.colour }}></div>
                                 <div className="absolute top-0 left-0 h-full w-full bg-black"></div>
                             </div>
                         </div>
-                        <div className="relative w-full p-12 pr-72 text-lg">
+                        <div className="relative w-full p-12 pr-48 text-lg col-span-2">
                             <div ref={descriptionReference} >{properties.description}</div>
                             <div ref={descriptionCoverReference}>
                                 <div className="absolute top-0 left-0 h-full w-full" style={{ backgroundColor: properties.colour }}></div>

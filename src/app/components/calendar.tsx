@@ -100,7 +100,7 @@ export const Calendar = (properties: Properties) =>
     let windowSize = useWindowSize();
     let containerReference = useRef<HTMLDivElement>(null);
     let [outputClusterList, setOutputClusterList] = useState<ClusterLayout[]>([]);
-    let [currentTime, setCurrentTime] = useState<Date>(new Date("2026-02-07T10:00:00")); //
+    let [currentTime, setCurrentTime] = useState<Date>(new Date());
 
     const buffer = 128;
     const offset = 384;
