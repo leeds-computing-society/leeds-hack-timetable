@@ -102,7 +102,7 @@ export default function Page()
         {
             let deltaTime = time - timeReference.current;
 
-            if (deltaTime >= 0 + 17200) // 70000 15200 // 60000
+            if (deltaTime >= 60000 + 17200) // 70000 15200 // 60000
             {
                 setBannerIndex((previousIndex) => (previousIndex + 1) % bannerList.length);
                 timeReference.current = time;
