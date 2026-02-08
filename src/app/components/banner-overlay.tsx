@@ -194,29 +194,29 @@ export const BannerOverlay = (properties: Banner) =>
     return (
         <>
             <div ref={backgroundReference} className="absolute -top-full left-0 z-50 w-full h-full" style={{ backgroundColor: properties.colour }}></div>
-            <div ref={containerReference} className="absolute -top-full left-0 z-50 w-full h-full grid grid-rows-3 bg-white">
+            <div ref={containerReference} className="absolute -top-full left-0 z-50 w-full h-full grid grid-rows-3 bg-black text-white">
                 <div ref={textReference} className="flex flex-col p-12 gap-3 row-span-1">
                     <div className="text-6xl">{properties.title}</div>
                     <div className="text-2xl">{properties.subtitle}<span className="underline underline-offset-2" style={{ color: properties.colour }}>{properties.subtitleLink}</span></div>
                 </div>
-                <div className="border-t border-dashed border-black grid grid-rows-2 overflow-hidden row-span-2">
-                    <div className="relative bg-warning-diagonal">
-                        <img ref={imageReference} className="absolute left-3/4 w-full h-full border-l border-black object-cover" src={properties.image}></img>
-                        <div ref={imageCoverReference} className="absolute top-0 left-0 h-full w-full bg-black"></div>
+                <div className="border-t border-dashed border-white grid grid-rows-2 overflow-hidden row-span-2">
+                    <div className="relative bg-warning-diagonal-dark">
+                        <img ref={imageReference} className="absolute left-3/4 w-full h-full border-l border-white object-cover" src={properties.image}></img>
+                        <div ref={imageCoverReference} className="absolute top-0 left-0 h-full w-full bg-white"></div>
                     </div>
-                    <div className="border-t border-dashed border-black grid grid-cols-3">
-                        <div className="relative border-r border-black border-dashed flex items-center justify-center col-span-1">
+                    <div className="border-t border-dashed border-white grid grid-cols-3">
+                        <div className="relative border-r border-white border-dashed flex items-center justify-center col-span-1 fill-white">
                             {properties.logo}
                             <div ref={logoCoverReference}>
                                 <div className="absolute top-0 left-0 h-full w-full" style={{ backgroundColor: properties.colour }}></div>
-                                <div className="absolute top-0 left-0 h-full w-full bg-black"></div>
+                                <div className="absolute top-0 left-0 h-full w-full bg-white"></div>
                             </div>
                         </div>
                         <div className="relative w-full p-12 pr-48 text-lg col-span-2">
                             <div ref={descriptionReference} >{properties.description}</div>
                             <div ref={descriptionCoverReference}>
                                 <div className="absolute top-0 left-0 h-full w-full" style={{ backgroundColor: properties.colour }}></div>
-                                <div className="absolute top-0 left-0 h-full w-full bg-black"></div>
+                                <div className="absolute top-0 left-0 h-full w-full bg-white"></div>
                             </div>
                         </div>
                     </div>

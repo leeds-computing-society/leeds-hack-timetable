@@ -419,3 +419,12 @@ html {
             transparent 4px,
             transparent 6px);
 }
+
+.bg-warning-diagonal-dark {
+    background: repeating-linear-gradient(135deg,
+            transparent 0px,
+            transparent 2px,
+            var(--color-white) 3px,
+            transparent 4px,
+            transparent 6px);
+}
